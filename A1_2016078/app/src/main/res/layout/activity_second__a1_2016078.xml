@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/name"
+        android:textSize="26sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/name_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_name"
+        android:layout_alignBottom="@+id/tv_name"
+        android:layout_toEndOf="@+id/tv_name"
+        android:layout_toRightOf="@+id/tv_name"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_name"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/roll"
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/roll_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_roll"
+        android:layout_alignBottom="@+id/tv_roll"
+        android:layout_marginRight="12dp"
+        android:layout_toEndOf="@+id/tv_roll"
+        android:layout_toRightOf="@+id/tv_roll"
+        android:padding="12dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_branch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_roll"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/branch"
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/branch_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_branch"
+        android:layout_alignBottom="@+id/tv_branch"
+        android:layout_toEndOf="@+id/tv_branch"
+        android:layout_toRightOf="@+id/tv_branch"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_course1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_branch"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/course1"
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/course1_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_course1"
+        android:layout_alignBottom="@+id/tv_course1"
+        android:layout_toEndOf="@+id/tv_course1"
+        android:layout_toRightOf="@+id/tv_course1"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_course2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_course1"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/course2"
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/course2_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_course2"
+        android:layout_alignBottom="@+id/tv_course2"
+        android:layout_toEndOf="@+id/tv_course2"
+        android:layout_toRightOf="@+id/tv_course2"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_course3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_course2"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/course3"
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/course3_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_course3"
+        android:layout_alignBottom="@+id/tv_course3"
+        android:layout_toEndOf="@+id/tv_course3"
+        android:layout_toRightOf="@+id/tv_course3"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_course4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_course3"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/course4"
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/course4_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_course4"
+        android:layout_alignBottom="@+id/tv_course4"
+        android:layout_toEndOf="@+id/tv_course4"
+        android:layout_toRightOf="@+id/tv_course4"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

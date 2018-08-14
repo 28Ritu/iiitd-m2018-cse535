@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="@string/name"
+        android:textSize="22sp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/name_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/name_tv"
+        android:layout_toRightOf="@+id/name_tv"
+        android:layout_marginRight="12dp"
+        android:inputType="textLongMessage"/>
+
+    <TextView
+        android:id="@+id/roll_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/name_tv"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/roll"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/roll_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/name_et"
+        android:layout_alignRight="@+id/name_et"
+        android:layout_toRightOf="@id/roll_tv"
+        android:layout_below="@id/name_et"
+        android:paddingTop="18dp"
+        android:inputType="textLongMessage"/>
+
+    <TextView
+        android:id="@+id/branch_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/roll_tv"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/branch"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/branch_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/roll_et"
+        android:layout_alignRight="@+id/roll_et"
+        android:layout_toRightOf="@id/branch_tv"
+        android:layout_below="@id/roll_et"
+        android:paddingTop="18dp"
+        android:inputType="textLongMessage"/>
+
+    <TextView
+        android:id="@+id/course1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/branch_tv"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/course1"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/course1_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/branch_et"
+        android:layout_alignRight="@+id/branch_et"
+        android:layout_toRightOf="@id/course1_tv"
+        android:layout_below="@id/branch_et"
+        android:paddingTop="18dp"
+        android:inputType="textLongMessage"/>
+
+    <TextView
+        android:id="@+id/course2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/course1_tv"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/course2"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/course2_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/course1_et"
+        android:layout_alignRight="@+id/course1_et"
+        android:layout_toRightOf="@id/course2_tv"
+        android:layout_below="@id/course1_et"
+        android:paddingTop="20dp"
+        android:inputType="textLongMessage"/>
+
+    <TextView
+        android:id="@+id/course3_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/course2_tv"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/course3"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/course3_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/course2_et"
+        android:layout_alignRight="@+id/course2_et"
+        android:layout_toRightOf="@id/course3_tv"
+        android:layout_below="@id/course2_et"
+        android:paddingTop="20dp"
+        android:inputType="textLongMessage"/>
+
+    <TextView
+        android:id="@+id/course4_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/course3_tv"
+        android:padding="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/course4"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/course4_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/course3_et"
+        android:layout_alignRight="@+id/course3_et"
+        android:layout_toRightOf="@id/course4_tv"
+        android:layout_below="@id/course3_et"
+        android:paddingTop="20dp"
+        android:inputType="textLongMessage"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/clear"
+        android:layout_alignBottom="@+id/clear"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:layout_toLeftOf="@+id/clear"
+        android:layout_toStartOf="@+id/clear"
+        android:text="@string/submit"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/course4_et"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/course4_et"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:text="@string/clear"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+</RelativeLayout>

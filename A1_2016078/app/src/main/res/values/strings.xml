@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">A1_2016078</string>
+    <string name="name">Name :</string>
+    <string name="roll">Roll No. :</string>
+    <string name="branch">Branch :</string>
+    <string name="course1">Course 1 :</string>
+    <string name="course2">Course 2 :</string>
+    <string name="course3">Course 3 :</string>
+    <string name="course4">Course 4 :</string>
+    <string name="submit">Submit</string>
+    <string name="clear">Clear</string>
+
+    <string name="create">CREATED</string>
+    <string name="start">STARTED</string>
+    <string name="resume">RESUMED</string>
+    <string name="pause">PAUSED</string>
+    <string name="stop">STOPPED</string>
+    <string name="destroy">DESTROYED</string>
+    <string name="restart">RESTARTED</string>
+
+    <string name="info">INFO</string>
+</resources>
