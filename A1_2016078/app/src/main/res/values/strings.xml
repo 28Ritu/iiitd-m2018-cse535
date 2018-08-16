@@ -19,4 +19,11 @@
     <string name="restart">RESTARTED</string>
 
     <string name="info">INFO</string>
+
+    <string name="name_et_hint_1">Name cannot be empty"</string>
+    <string name="name_et_hint_2">Only alphabets allowed"</string>
+    <string name="roll_et_hint_1">Roll No. cannot be empty"</string>
+    <string name="roll_et_hint_2"><font size="12">"Eg. 2016078, MT16001, Phd16001"</font></string>
+    <string name="branch_et_hint">"Branch cannot be empty"</string>
+    <string name="course_et_hint">Atleast 1 Course cannot be empty"</string>
 </resources>

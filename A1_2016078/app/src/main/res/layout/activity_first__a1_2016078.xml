@@ -29,7 +29,6 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/name_tv"
         android:padding="12dp"
-        android:layout_marginRight="12dp"
         android:text="@string/roll"
         android:textColor="@color/black"
         android:textSize="22sp" />
@@ -43,7 +42,8 @@
         android:layout_toRightOf="@id/roll_tv"
         android:layout_below="@id/name_et"
         android:paddingTop="18dp"
-        android:inputType="textLongMessage"/>
+        android:inputType="textLongMessage"
+        android:hint="@string/roll_et_hint_2"/>
 
     <TextView
         android:id="@+id/branch_tv"
@@ -53,7 +53,6 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/roll_tv"
         android:padding="12dp"
-        android:layout_marginRight="12dp"
         android:text="@string/branch"
         android:textColor="@color/black"
         android:textSize="22sp" />
@@ -64,6 +63,8 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/roll_et"
         android:layout_alignRight="@+id/roll_et"
+        android:layout_alignStart="@id/roll_et"
+        android:layout_alignLeft="@id/roll_et"
         android:layout_toRightOf="@id/branch_tv"
         android:layout_below="@id/roll_et"
         android:paddingTop="18dp"
@@ -77,7 +78,6 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/branch_tv"
         android:padding="12dp"
-        android:layout_marginRight="12dp"
         android:text="@string/course1"
         android:textColor="@color/black"
         android:textSize="22sp" />
@@ -88,6 +88,8 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/branch_et"
         android:layout_alignRight="@+id/branch_et"
+        android:layout_alignStart="@id/branch_et"
+        android:layout_alignLeft="@id/branch_et"
         android:layout_toRightOf="@id/course1_tv"
         android:layout_below="@id/branch_et"
         android:paddingTop="18dp"
@@ -101,7 +103,6 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/course1_tv"
         android:padding="12dp"
-        android:layout_marginRight="12dp"
         android:text="@string/course2"
         android:textColor="@color/black"
         android:textSize="22sp" />
@@ -112,6 +113,8 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/course1_et"
         android:layout_alignRight="@+id/course1_et"
+        android:layout_alignStart="@id/course1_et"
+        android:layout_alignLeft="@id/course1_et"
         android:layout_toRightOf="@id/course2_tv"
         android:layout_below="@id/course1_et"
         android:paddingTop="20dp"
@@ -125,7 +128,6 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/course2_tv"
         android:padding="12dp"
-        android:layout_marginRight="12dp"
         android:text="@string/course3"
         android:textColor="@color/black"
         android:textSize="22sp" />
@@ -136,6 +138,8 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/course2_et"
         android:layout_alignRight="@+id/course2_et"
+        android:layout_alignStart="@id/course2_et"
+        android:layout_alignLeft="@id/course2_et"
         android:layout_toRightOf="@id/course3_tv"
         android:layout_below="@id/course2_et"
         android:paddingTop="20dp"
@@ -149,7 +153,6 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/course3_tv"
         android:padding="12dp"
-        android:layout_marginRight="12dp"
         android:text="@string/course4"
         android:textColor="@color/black"
         android:textSize="22sp" />
@@ -160,6 +163,8 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/course3_et"
         android:layout_alignRight="@+id/course3_et"
+        android:layout_alignStart="@id/course3_et"
+        android:layout_alignLeft="@id/course3_et"
         android:layout_toRightOf="@id/course4_tv"
         android:layout_below="@id/course3_et"
         android:paddingTop="20dp"

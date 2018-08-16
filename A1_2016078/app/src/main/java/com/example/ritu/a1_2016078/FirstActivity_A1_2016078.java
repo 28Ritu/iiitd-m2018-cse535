@@ -3,6 +3,7 @@ package com.example.ritu.a1_2016078;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -58,15 +59,68 @@ public class FirstActivity_A1_2016078 extends AppCompatActivity {
                 user_course2 = course2.getText().toString();
                 user_course3 = course3.getText().toString();
                 user_course4 = course4.getText().toString();
-                Intent intent = new Intent(getApplicationContext(), SecondActivity_A1_2016078.class)
-                        .putExtra("name", user_name)
-                        .putExtra("roll", user_roll)
-                        .putExtra("branch", user_branch)
-                        .putExtra("course1", user_course1)
-                        .putExtra("course2", user_course2)
-                        .putExtra("course3", user_course3)
-                        .putExtra("course4", user_course4);
-                startActivity(intent);
+
+                if (user_name.matches("[a-zA-Z]+") && (user_roll.matches("[0-9]+") ||
+                        (user_roll.startsWith("MT") && user_roll.substring(2).matches("[0-9]+"))
+                        || (user_roll.startsWith("Phd") && user_roll.substring(3).matches("[0-9]+")))
+                        && !user_branch.isEmpty() && !(user_course1.isEmpty() && user_course2.isEmpty() &&
+                        user_course3.isEmpty() && user_course4.isEmpty())) {
+
+                    Intent intent = new Intent(getApplicationContext(), SecondActivity_A1_2016078.class)
+                            .putExtra("name", user_name)
+                            .putExtra("roll", user_roll)
+                            .putExtra("branch", user_branch)
+                            .putExtra("course1", user_course1)
+                            .putExtra("course2", user_course2)
+                            .putExtra("course3", user_course3)
+                            .putExtra("course4", user_course4);
+                    startActivity(intent);
+                }
+                else {
+
+                    if (user_name.isEmpty()) {
+
+                        name.setHint(Html.fromHtml("<small>" + getResources().getString(R.string.name_et_hint_1) + "</small>"));
+                        name.setHintTextColor(getResources().getColor(R.color.red));
+
+                    } else if (!user_name.matches("[a-zA-Z]+")) {
+
+                        name.getText().clear();
+                        name.setHint(Html.fromHtml("<small>"+ getResources().getString(R.string.name_et_hint_2) + "</small>"));
+                        name.setHintTextColor(getResources().getColor(R.color.red));
+                    }
+                    if (user_roll.isEmpty()) {
+
+                        roll.setHint(Html.fromHtml("<small>" + getResources().getString(R.string.roll_et_hint_1) + "</small>"));
+                        roll.setHintTextColor(getResources().getColor(R.color.red));
+
+                    } else if (!user_roll.matches("[0-9]+")) {
+
+                        roll.getText().clear();
+                        roll.setHint(Html.fromHtml("<small>" + getResources().getString(R.string.roll_et_hint_2) + "</small>"));
+                        roll.setHintTextColor(getResources().getColor(R.color.red));
+                    }
+                    if (user_branch.isEmpty()) {
+
+                        branch.setHint(Html.fromHtml("<small>" + getResources().getString(R.string.branch_et_hint) + "</small>"));
+                        branch.setHintTextColor(getResources().getColor(R.color.red));
+                    }
+                    if (user_course1.isEmpty() && user_course2.isEmpty() && user_course3.isEmpty()
+                            && user_course4.isEmpty()) {
+
+                        course1.setHint(Html.fromHtml("<small>" + getResources().getString(R.string.course_et_hint) + "</small>"));
+                        course1.setHintTextColor(getResources().getColor(R.color.red));
+
+                        course2.setHint(Html.fromHtml("<small>" + getResources().getString(R.string.course_et_hint) + "</small>"));
+                        course2.setHintTextColor(getResources().getColor(R.color.red));
+
+                        course3.setHint(Html.fromHtml("<small>" + getResources().getString(R.string.course_et_hint) + "</small>"));
+                        course3.setHintTextColor(getResources().getColor(R.color.red));
+
+                        course4.setHint(Html.fromHtml("<small>" + getResources().getString(R.string.course_et_hint) + "</small>"));
+                        course4.setHintTextColor(getResources().getColor(R.color.red));
+                    }
+                }
             }
         });
 
@@ -80,6 +134,14 @@ public class FirstActivity_A1_2016078 extends AppCompatActivity {
                 course2.getText().clear();
                 course3.getText().clear();
                 course4.getText().clear();
+
+                name.setHint(null);
+                roll.setHint(null);
+                branch.setHint(null);
+                course1.setHint(null);
+                course2.setHint(null);
+                course3.setHint(null);
+                course4.setHint(null);
             }
         });
 
