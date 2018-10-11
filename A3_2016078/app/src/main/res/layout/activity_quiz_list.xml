@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ritu.a3_2016078.QuizListActivity">
+    tools:context="com.example.ritu.a3_2016078.QuizListActivity_A3_2016078">
 
     <TextView
         android:layout_width="wrap_content"

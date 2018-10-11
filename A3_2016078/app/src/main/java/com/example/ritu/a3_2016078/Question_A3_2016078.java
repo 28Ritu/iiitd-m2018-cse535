@@ -5,7 +5,7 @@ public class Question_A3_2016078 {
     private static int mID;
     private String mQuestion;
     private String  mTitle;
-    private boolean mAnswer;
+    private String mAnswer;
 
     public Question_A3_2016078() {
     }
@@ -32,11 +32,11 @@ public class Question_A3_2016078 {
         mTitle = title;
     }
 
-    public boolean getAnswer() {
+    public String  getAnswer() {
         return mAnswer;
     }
 
-    public void setAnswer(boolean answer) {
+    public void setAnswer(String answer) {
         mAnswer = answer;
     }
 }

@@ -23,7 +23,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class FirstService_A3_2016078 extends Service {
-
     private String serverUrl = "http://192.168.43.203/UploadToServer.php";
     private QuestionDBHelper_A3_2016078 questionDBHelper;
 
@@ -65,15 +64,15 @@ public class FirstService_A3_2016078 extends Service {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-
             notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
             notificationBuilder = new Notification.Builder(getApplicationContext())
                     .setPriority(Notification.PRIORITY_MAX)
                     .setProgress(100, 0, false)
                     .setContentTitle("Uploading File")
-                    .setSmallIcon(R.mipmap.ic_launcher  )
+                    .setSmallIcon(R.mipmap.ic_launcher)
                     .setOngoing(true);
             notificationManager.notify(id, notificationBuilder.build());
+
         }
 
         @Override

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,6 +20,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuizDetailFragment_A3_2016078 extends Fragment {
 
@@ -33,6 +37,8 @@ public class QuizDetailFragment_A3_2016078 extends Fragment {
     private RadioButton false_button;
     private Button save_button;
     private Button next_button;
+    private Button prev_button;
+    private List<String> answerList;
 
     public static QuizDetailFragment_A3_2016078 newInstance(int questionId) {
         Bundle args = new Bundle();
@@ -53,7 +59,7 @@ public class QuizDetailFragment_A3_2016078 extends Fragment {
                 AlertDialog alertDialog = alertDialogBuilder.create();
                 alertDialog.show();
             } else if (action.equals("Success")) {
-                Toast.makeText(getContext(), "Successfully Uploaded", Toast.LENGTH_SHORT).show();
+                Log.d("Upload Message", "Success");
             }
         }
     };
@@ -64,6 +70,10 @@ public class QuizDetailFragment_A3_2016078 extends Fragment {
         int questionId = (int) getArguments().getSerializable(ARG_QUESTION_ID);
         questionDBHelper = QuestionDBHelper_A3_2016078.get(getActivity());
         mQuestion = questionDBHelper.getQuestion(questionId);
+        answerList = new ArrayList<>(30);
+        for (int i = 0; i < 30; i++)
+            answerList.add(null);
+        answer = null;
     }
 
     @Override
@@ -78,6 +88,7 @@ public class QuizDetailFragment_A3_2016078 extends Fragment {
         false_button = (RadioButton) view.findViewById(R.id.rb_false);
         save_button = (Button) view.findViewById(R.id.save_button);
         next_button = (Button) view.findViewById(R.id.next_button);
+        prev_button = (Button) view.findViewById(R.id.prev_button);
 
         mQuestionNo.setText(Integer.toString(mQuestion.getID()) + ".");
         mquestion.setText(mQuestion.getQuestion());
@@ -95,9 +106,14 @@ public class QuizDetailFragment_A3_2016078 extends Fragment {
         save_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                questionDBHelper.saveAnswer(mQuestion.getID(), answer);
-                String saved = "Saved Answer: " + answer;
-                Toast.makeText(getContext(), saved, Toast.LENGTH_SHORT).show();
+                if (answer == null) {
+                    Toast.makeText(getContext(), "Please select an answer", Toast.LENGTH_SHORT).show();
+                } else {
+                    questionDBHelper.saveAnswer(mQuestion.getID(), answer);
+                    String saved = "Saved Answer: " + answer;
+                    answerList.set(mQuestion.getID() - 1, answer);
+                    Toast.makeText(getContext(), saved, Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -112,6 +128,34 @@ public class QuizDetailFragment_A3_2016078 extends Fragment {
                 mQuestionNo.setText(Integer.toString(mQuestion.getID()) + ".");
                 mquestion.setText(mQuestion.getQuestion());
                 radioGroup.clearCheck();
+                if (answerList.get(mQuestion.getID() - 1) != null) {
+                    if (answerList.get(mQuestion.getID() - 1).equals(String.valueOf(true)))
+                        radioGroup.check(R.id.rb_true);
+                    else if (answerList.get(mQuestion.getID() - 1).equals(String.valueOf(false)))
+                        radioGroup.check(R.id.rb_false);
+                }
+                answer = null;
+            }
+        });
+
+        prev_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int questionId = mQuestion.getID();
+                if (questionId > 1)
+                    mQuestion = questionDBHelper.getQuestion(questionId - 1);
+                else if (questionId == 1)
+                    mQuestion = questionDBHelper.getQuestion(30);
+                mQuestionNo.setText(Integer.toString(mQuestion.getID()) + ".");
+                mquestion.setText(mQuestion.getQuestion());
+                radioGroup.clearCheck();
+                if (answerList.get(mQuestion.getID() - 1) != null) {
+                    if (answerList.get(mQuestion.getID() - 1).equals(String.valueOf(true)))
+                        radioGroup.check(R.id.rb_true);
+                    else if (answerList.get(mQuestion.getID() - 1).equals(String.valueOf(false)))
+                        radioGroup.check(R.id.rb_false);
+                }
+                answer = null;
             }
         });
 

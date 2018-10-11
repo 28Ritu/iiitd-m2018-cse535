@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ritu.a3_2016078.QuizDetailFragment">
+    tools:context="com.example.ritu.a3_2016078.QuizDetailActivity_A3_2016078">
 
     <TextView
         android:id="@+id/questionNo"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:padding="12dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="35dp"
             android:text="TRUE"/>
 
         <RadioButton
@@ -47,29 +47,39 @@
             android:layout_toRightOf="@id/rb_true"
             android:padding="12dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="35dp"
             android:text="FALSE"/>
     </RadioGroup>
 
     <Button
-        android:id="@+id/save_button"
+        android:id="@+id/prev_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/radio"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:textSize="17sp"
-        android:text="SAVE"/>
+        android:text="PREVIOUS"/>
 
     <Button
         android:id="@+id/next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/radio"
-        android:layout_toRightOf="@id/save_button"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="60dp"
+        android:layout_toRightOf="@id/prev_button"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="40dp"
         android:textSize="17sp"
         android:text="NEXT"/>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prev_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textSize="17sp"
+        android:text="SAVE"/>
 
 </RelativeLayout>

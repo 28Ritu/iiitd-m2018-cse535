@@ -11,6 +11,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -37,7 +38,7 @@ public class QuizListFragment_A3_2016078 extends Fragment {
                 AlertDialog alertDialog = alertDialogBuilder.create();
                 alertDialog.show();
             } else if (action.equals("Success")) {
-                Toast.makeText(getContext(), "Successfully Uploaded", Toast.LENGTH_SHORT).show();
+                Log.d("Upload Message", "Success");
             }
         }
     };
